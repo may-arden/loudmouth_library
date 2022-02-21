@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  manufacturer: MyString
+  sku: MyString
+  image_src: MyString
+  location: MyString
+  keywords: MyString
+  category: one
+
+two:
+  name: MyString
+  manufacturer: MyString
+  sku: MyString
+  image_src: MyString
+  location: MyString
+  keywords: MyString
+  category: two
