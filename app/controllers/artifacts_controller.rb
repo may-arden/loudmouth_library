@@ -1,9 +1,13 @@
 class ArtifactsController < ApplicationController
   before_action :set_artifact, only: [:show, :update, :destroy]
+  before_action :set_category, only: [:index]
 
   # GET /artifacts
   def index
-    @artifacts = Artifact.all
+    # @artifacts = Artifact.all
+    # byebug
+    @artifacts = @category.artifacts 
+    
 
     render json: @artifacts
   end
@@ -48,4 +52,8 @@ class ArtifactsController < ApplicationController
     def artifact_params
       params.require(:artifact).permit(:name, :manufacturer, :sku, :image_src, :location, :keywords, :category_id)
     end
+
+    def set_category 
+      @category = Category.find(params[:category_id])
+    end 
 end
